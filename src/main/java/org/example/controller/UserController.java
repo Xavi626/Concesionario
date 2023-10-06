@@ -36,31 +36,31 @@ public class UserController {
             System.out.println("¡ALERTA! Ha ocurrido un error: " + e.getMessage());
         }
     }
-    public void SelectServices() {
+    public void selectServices() {
         try (Scanner inputCar = new Scanner(System.in)) {
-
-        while (!selectCar) {
-
-                CarOptionsController carOptionsController = new CarOptionsController();
-
+            while (!selectCar) {
                 System.out.println("Escoge entre estas opciones: RENTING, COMPRAR o FINANCIAR");
                 String exportCar = inputCar.nextLine().toUpperCase();
 
                 if (exportCar.equals("RENTING")) {
+                    CarOptionsController carOptionsController = new CarOptionsController();
                     carOptionsController.rentingCar();
                     selectCar = true;
                 } else if (exportCar.equals("BUY")) {
+                    CarOptionsController carOptionsController = new CarOptionsController();
                     carOptionsController.buyCar();
                     selectCar = true;
                 } else if (exportCar.equals("FINANCIAR")) {
+                    CarOptionsController carOptionsController = new CarOptionsController();
                     carOptionsController.financialCar();
                     selectCar = true;
+                } else {
+                    System.out.println("Has introducido una opción no válida.");
                 }
             }
-            }catch (InputMismatchException e){
-            System.out.println("Has introducido mal la petición");
+        } catch (InputMismatchException e) {
+            System.out.println("Has introducido una entrada no válida.");
         }
     }
-
 }
 

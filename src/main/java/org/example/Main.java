@@ -21,6 +21,6 @@ public class Main {
         //userController.FindUser();
         CarController carController = new CarController();
         carController.viewCars();
-        userController.SelectServices();
+        userController.selectServices();
     }
 }
