@@ -1,6 +1,6 @@
 package org.example.controller;
 
-public class FinishWindow {
+public class FinishWindowController {
 
     public void completeRenting(){
         System.out.println("\n");

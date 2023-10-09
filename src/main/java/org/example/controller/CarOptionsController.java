@@ -43,8 +43,8 @@ public class CarOptionsController {
             System.out.println("Has seleccionado el automóvil: " + selectedCar.getBrand() + " " + selectedCar.getModel());
             System.out.println("Días de alquiler: " + rentingDays);
             System.out.println("Costo total del alquiler: $" + totalCost);
-            FinishWindow finishWindow = new FinishWindow();
-            finishWindow.completeRenting();
+            FinishWindowController finishWindowController = new FinishWindowController();
+            finishWindowController.completeRenting();
         } else {
             System.out.println("Automóvil no encontrado. Introduce un nombre de automóvil válido.");
         }
