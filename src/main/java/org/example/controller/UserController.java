@@ -46,7 +46,7 @@ public class UserController {
                     CarOptionsController carOptionsController = new CarOptionsController();
                     carOptionsController.rentingCar();
                     selectCar = true;
-                } else if (exportCar.equals("BUY")) {
+                } else if (exportCar.equals("COMPRAR")) {
                     CarOptionsController carOptionsController = new CarOptionsController();
                     carOptionsController.buyCar();
                     selectCar = true;

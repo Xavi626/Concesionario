@@ -50,9 +50,25 @@ public class CarOptionsController {
         }
     }
     public void buyCar(){
-        System.out.println("BUY CAR");
+        Scanner buyInput = new Scanner(System.in);
+        CarDao carDao = new CarDaoImpl();
+
+        List<Car> carsList = carDao.viewCars();
+        for (Car car : carsList) {
+            System.out.println(car.getBrand() + " " + car.getModel() + " Precio: " + car.getPrice()+"€");
+        }
+        System.out.println("Que automovil deseas comprar?");
+
+        String buyCar = buyInput.nextLine();
+
+        System.out.println("\n");
+
+        System.out.println("Redirigiendo a la pantalla de compra");
+        ShopCenterController shopCenterController = new ShopCenterController();
+        shopCenterController.Pay();
     }
     public void financialCar(){
-        System.out.println("FINANCIAR");
+        ShopCenterController shopCenterController = new ShopCenterController();
+        shopCenterController.Financial();
     }
 }
