@@ -8,10 +8,11 @@ public class Car {
     private int price;
     private String color;
     private boolean available;
+    private int priceRenting;
 
     public Car(){}
 
-    public Car(int id, String brand, String model, int cv, int price, String color, boolean available) {
+    public Car(int id, String brand, String model, int cv, int price, String color, boolean available, int priceRenting) {
         Id = id;
         this.brand = brand;
         this.model = model;
@@ -19,6 +20,7 @@ public class Car {
         this.price = price;
         this.color = color;
         this.available = available;
+        this.priceRenting = priceRenting;
     }
 
     public int getId() {
@@ -75,5 +77,17 @@ public class Car {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public int getPriceRenting() {
+        return priceRenting;
+    }
+
+    public void setPriceRenting(int priceRenting) {
+        this.priceRenting = priceRenting;
     }
 }

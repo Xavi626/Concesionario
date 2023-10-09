@@ -16,7 +16,7 @@ public class CarController {
             List<Car> cars = carDao.viewCars();
 
             for (Car car : cars){
-                System.out.println(" Marca: " + car.getBrand() +" Modelo: " + car.getModel() + " Color: " + car.getColor() + " CV: " + car.getCv() + " Disponibilidad: " + car.getAvailable() + " Precio: " + car.getPrice());
+                System.out.println(" Marca: " + car.getBrand() +" Modelo: " + car.getModel() + " Color: " + car.getColor() + " CV: " + car.getCv() + " Disponibilidad: " + car.getAvailable());
             }
         }
 }

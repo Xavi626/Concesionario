@@ -16,6 +16,7 @@ public class CarDaoImpl implements CarDao{
         bmwM3.setCv(456);
         bmwM3.setPrice(45356);
         bmwM3.setAvailable(true);
+        bmwM3.setPriceRenting(340);
         carList.add(bmwM3);
 
         Car AudiA4 = new Car();
@@ -26,6 +27,7 @@ public class CarDaoImpl implements CarDao{
         AudiA4.setCv(342);
         AudiA4.setPrice(56589);
         AudiA4.setAvailable(false);
+        AudiA4.setPriceRenting(128);
         carList.add(AudiA4);
 
         return carList;
