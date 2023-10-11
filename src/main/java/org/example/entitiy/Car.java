@@ -1,34 +1,51 @@
 package org.example.entitiy;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "ob_car")
 public class Car {
-    private int Id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
+
+    @Column(name = "brand")
     private String brand;
+
+    @Column(name = "model")
     private String model;
-    private int cv;
-    private int price;
+
+    @Column(name = "color")
     private String color;
-    private boolean available;
+
+    @Column(name = "cv")
+    private int cv;
+
+    @Column(name = "price")
+    private int price;
+
+    @Column(name = "priceRenting")
     private int priceRenting;
 
     public Car(){}
 
-    public Car(int id, String brand, String model, int cv, int price, String color, boolean available, int priceRenting) {
-        Id = id;
+    public Car(int id, String brand, String model, int cv, int price, String color, int priceRenting) {
+        this.id = id;
         this.brand = brand;
         this.model = model;
         this.cv = cv;
         this.price = price;
         this.color = color;
-        this.available = available;
         this.priceRenting = priceRenting;
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getBrand() {
@@ -63,13 +80,6 @@ public class Car {
         this.color = color;
     }
 
-    public boolean getAvailable() {
-        return available;
-    }
-
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
 
     public int getPrice() {
         return price;
@@ -79,9 +89,6 @@ public class Car {
         this.price = price;
     }
 
-    public boolean isAvailable() {
-        return available;
-    }
 
     public int getPriceRenting() {
         return priceRenting;
