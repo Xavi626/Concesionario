@@ -1,5 +1,5 @@
-CREATE DATABASE Concesionario;
-USE Concesionario;
+CREATE DATABASE server_java;
+USE server_java;
 CREATE TABLE ob_user(
 	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
     username VARCHAR(50) NOT NULL,
